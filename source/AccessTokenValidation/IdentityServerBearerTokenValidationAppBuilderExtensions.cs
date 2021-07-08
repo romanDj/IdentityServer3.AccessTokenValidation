@@ -162,6 +162,8 @@ namespace Owin
                     {
                         ValidIssuer = options.IssuerName,
                         ValidAudience = audience,
+                        ValidateAudience = options.ValidateAudience,
+                        ValidateIssuer = options.ValidateIssuer,
                         IssuerSigningToken = new X509SecurityToken(options.SigningCertificate),
 
                         NameClaimType = options.NameClaimType,
@@ -189,6 +191,8 @@ namespace Owin
                     var valParams = new TokenValidationParameters
                     {
                         ValidAudience = options.Audience.Length > 0 ? options.Audience : issuerProvider.Audience,
+                        ValidateAudience = options.ValidateAudience,
+                        ValidateIssuer = options.ValidateIssuer,
                         NameClaimType = options.NameClaimType,
                         RoleClaimType = options.RoleClaimType
                     };

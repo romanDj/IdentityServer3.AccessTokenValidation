@@ -45,6 +45,8 @@ namespace IdentityServer3.AccessTokenValidation
             DelayLoadMetadata = false;
             AutomaticRefreshInterval = TimeSpan.FromDays(1);
             Audience = "";
+            ValidateAudience = true;
+            ValidateIssuer = true;
         }
 
         /// <summary>
@@ -67,6 +69,16 @@ namespace IdentityServer3.AccessTokenValidation
         /// Audience
         /// </summary>
         public string Audience { get; set; }
+
+        /// <summary>
+        /// Gets or sets a boolean to control if the issuer will be validated during token
+        /// </summary>
+        public bool ValidateIssuer { get; set; }
+
+        /// <summary>
+        /// Gets or sets a boolean to control if the audience will be validated during token
+        /// </summary>
+        public bool ValidateAudience { get; set; }
 
         /// <summary>
         /// Gets or sets the signing certificate (if you don't want to use the discovery document).

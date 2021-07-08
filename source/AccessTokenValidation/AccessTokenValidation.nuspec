@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Ingenix.IdentityServer3.AccessTokenValidation</id>
-    <version>0.0.0</version>
+    <version>0.0.1</version>
     <title>Fork from IdentityServer3 - Access Token Validation</title>
     <authors>Ingenix</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
