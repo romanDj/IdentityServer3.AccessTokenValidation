@@ -1,20 +1,21 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>IdentityServer3.AccessTokenValidation</id>
+    <id>Ingenix.IdentityServer3.AccessTokenValidation</id>
     <version>0.0.0</version>
-    <title>IdentityServer3 - Access Token Validation</title>
-    <authors>Brock Allen, Dominick Baier</authors>
-    <owners>Brock Allen, Dominick Baier</owners>
-    <projectUrl>https://github.com/identityserver/IdentityServer3.AccessTokenValidation</projectUrl>
-    <iconUrl>https://identityserver.github.io/Documentation/assets/images/icons/IDserver_icon128.jpg</iconUrl>
+    <title>Fork from IdentityServer3 - Access Token Validation</title>
+    <authors>Ingenix</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://github.com/IdentityServer/IdentityServer3.AccessTokenValidation/blob/master/LICENSE</licenseUrl>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/romanDj/IdentityServer3.AccessTokenValidation</projectUrl>
+    <iconUrl>https://identityserver.github.io/Documentation/assets/images/icons/IDserver_icon128.jpg</iconUrl>
     <description>Access token validation middleware for JWT and reference tokens issued by IdentityServer3.</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
     <copyright>Copyright 2015</copyright>
     <tags>IdentityServer OpenID Connect OpenIDConnect OAuth2 OWIN ASP.NET Katana WebApi SSO Federation Claims Identity JWT token</tags>
-    
-    <frameworkAssemblies>
+	
+	
+	<frameworkAssemblies>
       <frameworkAssembly assemblyName="System.Runtime.Caching"  />
       <frameworkAssembly assemblyName="System.IdentityModel"  />
     </frameworkAssemblies>

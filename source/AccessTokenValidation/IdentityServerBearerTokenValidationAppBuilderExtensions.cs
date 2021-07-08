@@ -147,9 +147,17 @@ namespace Owin
                 if (!string.IsNullOrWhiteSpace(options.IssuerName) &&
                     options.SigningCertificate != null)
                 {
-                    var audience = options.IssuerName.EnsureTrailingSlash();
-                    audience += "resources";
+                    var audience = "";
 
+                    if (options.Audience.Length > 0)
+                    {
+                        audience = options.Audience;
+                    }
+                    else {
+                        audience = options.IssuerName.EnsureTrailingSlash();
+                        audience += "resources";
+                    }
+                                       
                     var valParams = new TokenValidationParameters
                     {
                         ValidIssuer = options.IssuerName,
@@ -161,7 +169,7 @@ namespace Owin
                     };
 
                     tokenFormat = new JwtFormat(valParams);
-                }
+                }  
                 else
                 {
                     // use discovery endpoint
@@ -180,7 +188,7 @@ namespace Owin
 
                     var valParams = new TokenValidationParameters
                     {
-                        ValidAudience = issuerProvider.Audience,
+                        ValidAudience = options.Audience.Length > 0 ? options.Audience : issuerProvider.Audience,
                         NameClaimType = options.NameClaimType,
                         RoleClaimType = options.RoleClaimType
                     };

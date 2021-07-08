@@ -44,6 +44,7 @@ namespace IdentityServer3.AccessTokenValidation
             PreserveAccessToken = false;
             DelayLoadMetadata = false;
             AutomaticRefreshInterval = TimeSpan.FromDays(1);
+            Audience = "";
         }
 
         /// <summary>
@@ -61,6 +62,11 @@ namespace IdentityServer3.AccessTokenValidation
         /// The name of the issuer.
         /// </value>
         public string IssuerName { get; set; }
+
+        /// <summary>
+        /// Audience
+        /// </summary>
+        public string Audience { get; set; }
 
         /// <summary>
         /// Gets or sets the signing certificate (if you don't want to use the discovery document).

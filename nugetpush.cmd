@@ -1,1 +1,1 @@
-nuget push distribution\*.nupkg
+dotnet nuget push distribution\*.nupkg
